@@ -1,6 +1,6 @@
 # In the Weeds: Learn AI Workflows With an AI Instructor
 
-Welcome to the In the Weeds content repository. This is every published article from my <a href="https://hannahstulberg.substack.com/" target="_blank">Substack</a>, available in a format that coding agents can read and teach from.
+Welcome to the In the Weeds content repository. This is every published article from my [Substack](https://hannahstulberg.substack.com/), available in a format that coding agents can read and teach from.
 
 Clone this repo, open it in your IDE, and your AI coding agent (Claude Code, Cursor, Codex - anything that reads CLAUDE.md or AGENTS.md files) becomes a personal instructor for everything I've written. It answers your questions, cites the specific article and section it's drawing from, and helps you learn at your own pace.
 
@@ -64,14 +64,14 @@ Just read the articles directly. Start with `claude-code-for-everything/01-*/art
 
 ## Practice repo
 
-The GitHub 101 article includes a real practice repo at <a href="https://github.com/sidwyn/acme-ops" target="_blank">sidwyn/acme-ops</a> where you can fork, clone, and submit your first pull request. When you're ready for hands-on GitHub practice, head there.
+The GitHub 101 article includes a real practice repo at [sidwyn/acme-ops](https://github.com/sidwyn/acme-ops) where you can fork, clone, and submit your first pull request. When you're ready for hands-on GitHub practice, head there.
 
 ## Contributors
 
-This repository was created by <a href="https://hannahstulberg.substack.com/" target="_blank">Hannah Stulberg</a>. Some articles are co-authored with:
+This repository was created by [Hannah Stulberg](https://hannahstulberg.substack.com/). Some articles are co-authored with:
 
-- <a href="https://www.pathtostaff.com/" target="_blank">Sidwyn Koh</a> (Tool School: GitHub 101)
-- <a href="https://leadershipinchange.com/" target="_blank">Joel Salinas</a> (The One File That Can Save Your Team Thousands of Hours)
+- [Sidwyn Koh](https://www.pathtostaff.com/) (Tool School: GitHub 101)
+- [Joel Salinas](https://leadershipinchange.com/) (The One File That Can Save Your Team Thousands of Hours)
 
 See [CONTRIBUTORS.md](CONTRIBUTORS.md) for full bios and links.
 
@@ -81,4 +81,4 @@ CC BY-NC 4.0 - see [LICENSE](LICENSE) for per-article attribution details.
 
 ## Questions or feedback?
 
-Join the <a href="https://substack.com/chat/335953" target="_blank">In the Weeds subscriber chat</a> on Substack, or subscribe at <a href="https://hannahstulberg.substack.com/" target="_blank">hannahstulberg.substack.com</a> for new articles.
+Join the [In the Weeds subscriber chat](https://substack.com/chat/335953) on Substack, or subscribe at [hannahstulberg.substack.com](https://hannahstulberg.substack.com/) for new articles.
