@@ -49,7 +49,7 @@ Every AI model launch comes with a scorecard. Here's the framework for reading i
 1. **Knowledge & Reasoning:** Academic and professional knowledge tests (MMLU, GPQA Diamond, HLE, GDPval)
 2. **Coding:** Whether models can write code that actually works (SWE-bench Pro, SWE-Lancer)
 3. **Reasoning:** Novel problem-solving the model has never seen before (ARC-AGI-3, ARC-AGI-2)
-4. **Agentic & Computer Use:** Whether models can do sustained, multi-step professional work (OSWorld, tau2-bench, BigLaw Bench)
+4. **Agentic & Computer Use:** Whether models can do sustained, multi-step professional work (OSWorld, tau2-bench, BigLaw Bench, Terminal-Bench 2.0)
 
 **3 questions to ask about any benchmark score:**
 
@@ -67,7 +67,7 @@ Every AI model launch comes with a scorecard. Here's the framework for reading i
 
 1. What benchmarks are missing from the scorecard?
 2. What baseline is the company comparing against?
-3. How does human preference (Chatbot Arena) compare to the benchmark story?
+3. How does human preference compare to the benchmark story?
 4. How transparent is the methodology?
 
 ***The best model is the one that does the work you need, at a price you can justify, on benchmarks you understand.***
