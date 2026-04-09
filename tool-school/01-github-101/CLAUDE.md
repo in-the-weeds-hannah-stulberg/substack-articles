@@ -61,22 +61,22 @@
 | Closing out your review | 787 | Comment, approve, or request changes |
 | How to know when your PR is approved | 803 | Email, GitHub bell, Slack, PR page status |
 | Step 6: Merge | 826 | Combine changes into main |
-| Merge conflicts | 832 | What they are; Claude Code resolution; manual markers |
-| Merging a pull request | 852 | Three merge options: squash, merge commit, rebase; branch cleanup |
-| Beyond the Daily Workflow | 876 | Additional GitHub features |
-| Notifications | 878 | Email, bell, Slack, mobile; customization |
-| Putting It All Together: Sarah's Full Workflow | 897 | Complete end-to-end example with all nine steps |
-| When Things Go Wrong | 925 | Four common Git errors and fixes |
-| "Your branch is behind 'origin/main'" | 931 | Local copy out of date; git pull |
-| "Merge conflict in [filename]" | 941 | Two people changed same lines; resolution |
-| "HEAD detached at [some hash]" | 951 | Checked out a commit instead of branch |
-| "Permission denied (publickey)" | 961 | SSH key not set up correctly |
-| "I accidentally cloned a repo inside another repo" | 971 | Nested repos; move to fix |
-| The Big Reassurance | 977 | Git is recoverable; errors look scarier than they are |
-| .gitignore: What NOT to Upload | 983 | API keys, node_modules, .env security; templates |
-| What You Should Have Now | 999 | Summary of all outcomes |
-| Your Turn: Submit Your First PR | 1011 | Interactive exercise: easy path and challenge path |
-| The easy path | 1028 | Create takeaways file, commit, push, open PR |
-| The challenge path | 1034 | Edit community-board.md, resolve merge conflict |
-| Preview: GitHub 102 | 1040 | Upcoming topics: worktrees, Actions, Issues, Pages |
-| Want to Go Deeper? | 1053 | External resources: Learn Git Branching, GitHub skills, Pro Git, Oh Shit Git |
+| Merge conflicts | 830 | What they are; Claude Code resolution; manual markers |
+| Merging a pull request | 850 | Three merge options: squash, merge commit, rebase; branch cleanup |
+| Beyond the Daily Workflow | 874 | Additional GitHub features |
+| Notifications | 876 | Email, bell, Slack, mobile; customization |
+| Putting It All Together: Sarah's Full Workflow | 895 | Complete end-to-end example with all nine steps |
+| When Things Go Wrong | 923 | Four common Git errors and fixes |
+| "Your branch is behind 'origin/main'" | 929 | Local copy out of date; git pull |
+| "Merge conflict in [filename]" | 939 | Two people changed same lines; resolution |
+| "HEAD detached at [some hash]" | 949 | Checked out a commit instead of branch |
+| "Permission denied (publickey)" | 959 | SSH key not set up correctly |
+| "I accidentally cloned a repo inside another repo" | 969 | Nested repos; move to fix |
+| The Big Reassurance | 975 | Git is recoverable; errors look scarier than they are |
+| .gitignore: What NOT to Upload | 981 | API keys, node_modules, .env security; templates |
+| What You Should Have Now | 997 | Summary of all outcomes |
+| Your Turn: Submit Your First PR | 1009 | Interactive exercise: easy path and challenge path |
+| The easy path | 1026 | Create takeaways file, commit, push, open PR |
+| The challenge path | 1032 | Edit community-board.md, resolve merge conflict |
+| Preview: GitHub 102 | 1038 | Upcoming topics: worktrees, Actions, Issues, Pages |
+| Want to Go Deeper? | 1051 | External resources: Learn Git Branching, GitHub skills, Pro Git, Oh Shit Git |

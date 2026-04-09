@@ -8,5 +8,6 @@ Articles that stand on their own - not part of a series, but packed with practic
 |---|-------|------|------------|
 | 1 | Skip the Terminal (And 8 Other Claude Code Tricks for Non-Technical Users) | `skip-the-terminal-and-8-other-claude-code-tricks-for-non-technical-users/` | IDE setup, Cursor, hidden files, parallel sessions, context limits, Wispr Flow, CLAUDE.md |
 | 2 | Stop Typing, Start Talking | `stop-typing-start-talking/` | Dictation workflow, typing vs speaking speed, Wispr Flow, AI editing, Claude Code skills |
+| 3 | Build a Team OS with Claude Code | `build-a-team-os-with-claude-code/` | Team OS, shared repo, nested CLAUDE.md, context management, analytics scaling, plan mode, learning flywheel |
 
 Each article folder has its own CLAUDE.md with section-level line numbers for precise navigation.

@@ -52,6 +52,7 @@ Each article lives in its own folder with two key files:
 | 9 | CC4E #7: Your Status Line Is Empty (Let's Fix That) | Claude Code for Everything | Hannah Stulberg | Status line configuration, context progress bar, Google Workspace MCP, external data sources | `claude-code-for-everything/07-your-status-line-is-empty-lets-fix-that/article.md` |
 | 10 | Tool School: GitHub 101 (GitHub is the New Google Drive) | Tool School | Hannah Stulberg, Sidwyn Koh | GitHub concepts, Git setup, SSH keys, repositories, daily workflow, pull requests, merge conflicts | `tool-school/01-github-101/article.md` |
 | 11 | Tool School: Benchmarking 101 (How To Read AI Model Report Cards) | Tool School | Hannah Stulberg, Akshat Khandelwal | AI benchmarks, model launches, scoring methods, benchmark categories, saturation, trust tiers, cost comparison, head-to-head evaluation | `tool-school/02-benchmarking-101/article.md` |
+| 12 | Build a Team OS with Claude Code | Standalone | Aakash Gupta (featuring Hannah Stulberg) | Team OS, shared repo, nested CLAUDE.md, context management, token efficiency, analytics scaling, plan mode, parallel agents, learning flywheel | `standalone/build-a-team-os-with-claude-code/article.md` |
 
 ## Topic quick lookup
 
@@ -97,6 +98,14 @@ When someone asks about these topics, point them here:
 | Bash commands | CC4E #1 | "Step 6: Understanding bash commands" |
 | Workspace setup / split editor | CC4E #2 | "Setting Up Your Workspace" |
 | Boris Cherny | CC4E #2 | "The Claude Code Creator's Workflow" |
+| Team OS / shared repo for teams | Build a Team OS | Full article |
+| Nested doc indexes / navigation maps | Build a Team OS | "Component 2 - Nested doc indexes" |
+| Token efficiency / tiered context loading | Build a Team OS | "The token efficiency framework" |
+| Analytics in shared repo / metrics queries schemas | Build a Team OS | "3. Scaling analytics across functions" |
+| Plan mode (advanced usage) | Build a Team OS | "4. How to write 10x docs with planning" |
+| Parallel agents / temp files | Build a Team OS | "Parallel agents and temp files" |
+| Learning flywheel / automation loop | Build a Team OS | "5. The learning flywheel" |
+| Feature launch gate / repo as launch checklist | Build a Team OS | "Layer 3 - The feature launch gate" |
 
 ## Key metaphors
 
@@ -124,6 +133,7 @@ These are behavioral metaphors - they map to actions, not just concepts. Use the
 ## Companion repos
 
 - **[sidwyn/acme-ops](https://github.com/sidwyn/acme-ops)** - Practice repo for the GitHub 101 article. Fork it, clone it, and work through the exercises to submit your first PR.
+- **[in-the-weeds-hannah-stulberg/team-os-example-repo](https://github.com/in-the-weeds-hannah-stulberg/team-os-example-repo)** - Template Team OS repo for the Build a Team OS with Claude Code article. Clone it to start your own Team OS.
 
 ## About
 
@@ -134,5 +144,6 @@ These are behavioral metaphors - they map to actions, not just concepts. Use the
 - [Sidwyn Koh](https://www.pathtostaff.com/) - Co-author, Tool School: GitHub 101
 - [Joel Salinas](https://leadershipinchange.com/) - Collaborator, The One File That Can Save Your Team Thousands of Hours
 - [Akshat Khandelwal](https://helpmeunpack.substack.com/) - Co-author, Tool School: Benchmarking 101
+- [Aakash Gupta](https://www.news.aakashg.com/) - Author, Build a Team OS with Claude Code (featuring Hannah Stulberg)
 
 See [CONTRIBUTORS.md](CONTRIBUTORS.md) for full bios and links.

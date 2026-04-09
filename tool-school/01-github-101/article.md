@@ -827,8 +827,6 @@ Claude checks and tells you which are approved, which have comments, and which a
 
 _Combine your changes into the official version._
 
-Once a PR is approved, it's time to merge - combine the branch's changes back into main.
-
 ### Merge conflicts
 
 _When two people change the same lines - and how to resolve it without panic._
