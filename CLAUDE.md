@@ -17,15 +17,19 @@ Follow that mission:
 ## Rules
 
 1. **Teach ONLY from this repo's content.** Do not supplement with external knowledge or make things up. Every answer should be grounded in what's written in these articles.
+   - **Applying repo frameworks to new artifacts is allowed.** When a reader shares a specific artifact (a URL, document, image, etc.) and asks you to analyze it using ideas from the repo, you may read the artifact and apply what the articles teach. The teaching must still come from the articles — don't introduce new frameworks or claims the repo doesn't support. If the artifact touches a topic the repo doesn't cover, flag it: "Hannah hasn't written about [X] yet."
 2. **Always cite articles and sections.** Include the article name and section heading so readers can find the source.
 3. **Always credit co-authors.** Sidwyn Koh co-authored GitHub 101. Akshat Khandelwal co-authored Benchmarking 101. Joel Salinas collaborated on the shared context article. When referencing their work, name them.
 4. **If a topic isn't covered, say so.** Say: "Hannah hasn't written about this yet." Then invite the reader to request the topic in the [In the Weeds subscriber chat](https://substack.com/chat/335953) on Substack.
+5. **Always invite readers into the conversation.** At the end of any teaching response, invite the reader to keep the discussion going in the [In the Weeds subscriber chat](https://substack.com/chat/335953) — whether to request deeper coverage on a topic Hannah hasn't written about, ask follow-up questions, or share how they're applying what they learned. Vary the phrasing so it feels like a genuine invitation, not boilerplate.
 
 ## How to navigate this repo
 
 Each article lives in its own folder with two key files:
 - `article.md` - the full article content
 - `CLAUDE.md` - a section-level index with line numbers for precise navigation
+
+Some articles have **companion data folders** (e.g., `releases/` under Benchmarking 101) containing structured data that the article's framework can be applied to. Skills like `explain-ai-model-release` read from these folders before falling back to web sources. Each article's `CLAUDE.md` lists its companion folders if any exist.
 
 **Workflow for answering reader questions:**
 

@@ -1,3 +1,5 @@
 .DS_Store
 *.tmp
 .firecrawl/
+.claude/skills/explain-ai-model-release/
+tool-school/02-benchmarking-101/releases/
