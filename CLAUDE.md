@@ -57,6 +57,7 @@ Some articles have **companion data folders** (e.g., `releases/` under Benchmark
 | 10 | Tool School: GitHub 101 (GitHub is the New Google Drive) | Tool School | Hannah Stulberg, Sidwyn Koh | GitHub concepts, Git setup, SSH keys, repositories, daily workflow, pull requests, merge conflicts | `tool-school/01-github-101/article.md` |
 | 11 | Tool School: Benchmarking 101 (How To Read AI Model Report Cards) | Tool School | Hannah Stulberg, Akshat Khandelwal | AI benchmarks, model launches, scoring methods, benchmark categories, saturation, trust tiers, cost comparison, head-to-head evaluation | `tool-school/02-benchmarking-101/article.md` |
 | 12 | Build a Team OS with Claude Code | Standalone | Aakash Gupta (featuring Hannah Stulberg) | Team OS, shared repo, nested CLAUDE.md, context management, token efficiency, analytics scaling, plan mode, parallel agents, learning flywheel | `standalone/build-a-team-os-with-claude-code/article.md` |
+| 13 | Business Sense for Engineers: The Missing Half of Product Sense | Standalone | Sidwyn Koh, Hannah Stulberg | Business sense, P&L, unit economics, CLV/CAC, business models, market sizing, TAM, competitive landscape, moats, 10-K reading | `standalone/business-sense-for-engineers/article.md` |
 
 ## Topic quick lookup
 
@@ -110,6 +111,13 @@ When someone asks about these topics, point them here:
 | Parallel agents / temp files | Build a Team OS | "Parallel agents and temp files" |
 | Learning flywheel / automation loop | Build a Team OS | "5. The learning flywheel" |
 | Feature launch gate / repo as launch checklist | Build a Team OS | "Layer 3 - The feature launch gate" |
+| Business sense / why engineers need it | Business Sense for Engineers | "Product sense won't help you if you don't understand the business" |
+| Four components of business sense | Business Sense for Engineers | "Business Sense 101" |
+| P&L / unit economics / CLV / CAC / ARPU / churn | Business Sense for Engineers | "How a company makes money: Know what moves the needle" |
+| Business model fluency / pricing model vs business model | Business Sense for Engineers | "Business model fluency: Your business model shapes what you build" |
+| Market sizing / TAM / Uber example | Business Sense for Engineers | "Market sizing: Identifying opportunities worth investing in" |
+| Competitive landscape / moats / Stripe / Microsoft Teams | Business Sense for Engineers | "Competitive landscape: You need to know how your company wins" |
+| How to build business sense / 10-K reading | Business Sense for Engineers | "How to actually build business sense" |
 
 ## Key metaphors
 
@@ -145,7 +153,7 @@ These are behavioral metaphors - they map to actions, not just concepts. Use the
 
 **Contributors:**
 - [Hannah Stulberg](https://hannahstulberg.substack.com/) - Author of all articles
-- [Sidwyn Koh](https://www.pathtostaff.com/) - Co-author, Tool School: GitHub 101
+- [Sidwyn Koh](https://www.pathtostaff.com/) - Co-author, Tool School: GitHub 101 and Business Sense for Engineers
 - [Joel Salinas](https://leadershipinchange.com/) - Collaborator, The One File That Can Save Your Team Thousands of Hours
 - [Akshat Khandelwal](https://helpmeunpack.substack.com/) - Co-author, Tool School: Benchmarking 101
 - [Aakash Gupta](https://www.news.aakashg.com/) - Author, Build a Team OS with Claude Code (featuring Hannah Stulberg)

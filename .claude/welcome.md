@@ -17,7 +17,7 @@ If the first message is a **specific question** (anything substantive), skip the
 
 ### Greeting block
 
-> Welcome to **In the Weeds** — a learning repo built from 12 published articles on practical AI workflows by Hannah Stulberg, with contributions from Sidwyn Koh, Akshat Khandelwal, Joel Salinas, and Aakash Gupta.
+> Welcome to **In the Weeds** — a learning repo built from 13 published articles on practical AI workflows by Hannah Stulberg, with contributions from Sidwyn Koh, Akshat Khandelwal, Joel Salinas, and Aakash Gupta.
 >
 > I teach only from these articles and always point you to the exact article + section so you can read more.
 >

@@ -20,7 +20,9 @@ Sidwyn is a staff software engineer at Meta and the creator of Path to Staff, a 
 - [LinkedIn](https://www.linkedin.com/in/sidwyn/)
 - [GitHub](https://github.com/sidwyn)
 
-**Articles in this repo:** Tool School: GitHub 101 (co-author)
+**Articles in this repo:**
+- Tool School: GitHub 101 (co-author)
+- Business Sense for Engineers: The Missing Half of Product Sense (co-author)
 
 ## Joel Salinas
 
