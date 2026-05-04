@@ -57,7 +57,7 @@ Some articles have **companion data folders** (e.g., `releases/` under Benchmark
 | 10 | Tool School: GitHub 101 (GitHub is the New Google Drive) | Tool School | Hannah Stulberg, Sidwyn Koh | GitHub concepts, Git setup, SSH keys, repositories, daily workflow, pull requests, merge conflicts | `tool-school/01-github-101/article.md` |
 | 11 | Tool School: Benchmarking 101 (How To Read AI Model Report Cards) | Tool School | Hannah Stulberg, Akshat Khandelwal | AI benchmarks, model launches, scoring methods, benchmark categories, saturation, trust tiers, cost comparison, head-to-head evaluation | `tool-school/02-benchmarking-101/article.md` |
 | 12 | Build a Team OS with Claude Code | Standalone | Aakash Gupta (featuring Hannah Stulberg) | Team OS, shared repo, nested CLAUDE.md, context management, token efficiency, analytics scaling, plan mode, parallel agents, learning flywheel | `standalone/build-a-team-os-with-claude-code/article.md` |
-| 13 | Business Sense for Engineers: The Missing Half of Product Sense | Standalone | Sidwyn Koh, Hannah Stulberg | Business sense, P&L, unit economics, CLV/CAC, business models, market sizing, TAM, competitive landscape, moats, 10-K reading | `standalone/business-sense-for-engineers-the/article.md` |
+| 13 | Business Sense for Engineers: The Missing Half of Product Sense | Standalone | Sidwyn Koh, Hannah Stulberg | Business sense, P&L, unit economics, CLV/CAC, business models, market sizing, TAM, competitive landscape, moats, 10-K reading | `standalone/business-sense-for-engineers/article.md` |
 
 ## Topic quick lookup
 
