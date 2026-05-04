@@ -2,4 +2,6 @@
 *.tmp
 .firecrawl/
 .claude/skills/explain-ai-model-release/
+.claude/skills/add-substack-article-to-repo/
+.claude/skills/add-substack-urls-to-article/
 tool-school/02-benchmarking-101/releases/
