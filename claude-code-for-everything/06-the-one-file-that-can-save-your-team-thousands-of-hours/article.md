@@ -3,19 +3,13 @@ title: "The One File That Can Save Your Team Thousands of Hours"
 subtitle: "How shared context files turn individual AI use into team intelligence"
 authors:
   - name: "Hannah Stulberg"
-    role: "Guest contributor"
-    publication: "In the Weeds"
-    links:
-      substack: "https://hannahstulberg.substack.com/"
-      linkedin: "https://www.linkedin.com/in/hannah-stulberg/"
-      youtube: "https://www.youtube.com/@hannahstulberg"
+    publication:
+      name: "In the Weeds"
+      url: "https://hannahstulberg.substack.com/"
   - name: "Joel Salinas"
-    role: "Collaborator"
-    publication: "Leadership in Change"
-    links:
-      substack: "https://leadershipinchange.com/"
-      linkedin: "https://www.linkedin.com/in/joelsalinas/"
-      website: "https://jsalinas.org/"
+    publication:
+      name: "Leadership in Change"
+      url: "https://leadershipinchange.com/"
 published: 2026-02-21
 series: "Claude Code for Everything"
 series_number: 6

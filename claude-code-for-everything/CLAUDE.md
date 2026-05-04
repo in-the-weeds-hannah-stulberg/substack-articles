@@ -1,6 +1,6 @@
 # Claude Code for Everything
 
-A 7-part series that takes you from zero to productive with Claude Code - no coding required. Written by Hannah Stulberg, with one collaboration article featuring Joel Salinas.
+An 8-part series that takes you from zero to productive with Claude Code - no coding required. Written by Hannah Stulberg, with one collaboration article featuring Joel Salinas.
 
 Read the articles in order if you're new. Each one builds on the last.
 
@@ -15,5 +15,6 @@ Read the articles in order if you're new. Each one builds on the last.
 | 5 | The Best Personal Assistant Remembers Things About You | `05-claudemd-files/` | CLAUDE.md files, folder structure, hierarchical context, onboarding docs |
 | 6 | The One File That Can Save Your Team Thousands of Hours | `06-the-one-file-that-can-save-your-team-thousands-of-hours/` | Shared context files, team-level CLAUDE.md, knowledge compounding (co-author: Joel Salinas) |
 | 7 | Your Status Line Is Empty (Let's Fix That) | `07-your-status-line-is-empty-lets-fix-that/` | Status line configuration, context progress bar, Google Workspace MCP, external data sources |
+| 8 | Keeping Up with the Claude Code Treadmill (30 Claude Code Tips & Tricks) | `08-keeping-up-with-the-claude-code-treadmill/` | Cursor themes, terminal panel, markdown extensions, /context, claude-counter, DeepWiki, markitdown, Firecrawl, Claude in Chrome, Playwright/DevTools MCPs, Mermaid, /branch, /btw, Caveman, RTK, /voice, /loop, mobile app, /teleport, Claude Code Channels, thinking verbs |
 
 Each article folder has its own CLAUDE.md with section-level line numbers for precise navigation.

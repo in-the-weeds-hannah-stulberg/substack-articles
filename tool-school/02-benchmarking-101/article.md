@@ -3,16 +3,13 @@ title: "Tool School: Benchmarking 101 (How To Read AI Model Report Cards)"
 subtitle: "Learn to read the scorecard behind every AI model launch"
 authors:
   - name: "Hannah Stulberg"
-    publication: "In the Weeds"
-    links:
-      substack: "https://hannahstulberg.substack.com/"
-      linkedin: "https://www.linkedin.com/in/hannah-stulberg/"
-      youtube: "https://www.youtube.com/@hannahstulberg"
+    publication:
+      name: "In the Weeds"
+      url: "https://hannahstulberg.substack.com/"
   - name: "Akshat Khandelwal"
-    publication: "Help Me Unpack"
-    links:
-      substack: "https://helpmeunpack.substack.com/"
-      linkedin: "https://www.linkedin.com/in/akshatkhandelwal/"
+    publication:
+      name: "Help Me Unpack"
+      url: "https://helpmeunpack.substack.com/"
 published: 2026-03-31
 series: "Tool School"
 series_number: 2

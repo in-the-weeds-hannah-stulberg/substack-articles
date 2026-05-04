@@ -3,19 +3,13 @@ title: "Build a Team OS with Claude Code"
 subtitle: "What it actually looks like when a PM checks in every document, every metric, every customer call into a shared repo - and the whole team queries it themselves."
 authors:
   - name: "Aakash Gupta"
-    role: "author"
-    publication: "Product Growth"
-    links:
-      substack: "https://www.news.aakashg.com/"
-      linkedin: "https://www.linkedin.com/in/aakashg/"
-      youtube: "https://www.youtube.com/@aakashgupta"
+    publication:
+      name: "Product Growth"
+      url: "https://www.news.aakashg.com/"
   - name: "Hannah Stulberg"
-    role: "guest"
-    publication: "In the Weeds"
-    links:
-      substack: "https://hannahstulberg.substack.com/"
-      linkedin: "https://www.linkedin.com/in/hannah-stulberg/"
-      youtube: "https://www.youtube.com/@hannahstulberg"
+    publication:
+      name: "In the Weeds"
+      url: "https://hannahstulberg.substack.com/"
 published: 2026-04-07
 original_url: "https://www.news.aakashg.com/p/claude-code-team-os"
 license: "CC BY-NC 4.0"

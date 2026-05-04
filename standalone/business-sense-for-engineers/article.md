@@ -1,11 +1,18 @@
-# Business Sense for Engineers: The Missing Half of Product Sense
-
-### Engineers who understand business sense create the most leverage
-
-**Authors:** [Sidwyn Koh](https://substack.com/@sidwyn) and [Hannah Stulberg](https://substack.com/@hannahstulberg)
-
-**Published:** Apr 25, 2026 on [Path to Staff Engineer](https://www.pathtostaff.com/p/business-sense-for-engineers-the)
-
+---
+title: "Business Sense for Engineers: The Missing Half of Product Sense"
+subtitle: "Engineers who understand business sense create the most leverage"
+authors:
+  - name: "Sidwyn Koh"
+    publication:
+      name: "Path to Staff"
+      url: "https://www.pathtostaff.com/"
+  - name: "Hannah Stulberg"
+    publication:
+      name: "In the Weeds"
+      url: "https://hannahstulberg.substack.com/"
+published: 2026-04-25
+original_url: "https://www.pathtostaff.com/p/business-sense-for-engineers-the"
+license: "CC BY-NC 4.0"
 ---
 
 Welcome back to Path to Staff. With AI making it easier for engineers to build, you start to see "product sense" everywhere. It appears in every framework, every career thread, every promotion guide.

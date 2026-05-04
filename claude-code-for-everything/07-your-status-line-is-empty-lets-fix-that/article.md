@@ -3,11 +3,9 @@ title: "Claude Code for Everything: Your Status Line Is Empty (Let's Fix That)"
 subtitle: "Turn the bottom of your terminal into a personal command center"
 authors:
   - name: "Hannah Stulberg"
-    publication: "In the Weeds"
-    links:
-      substack: "https://hannahstulberg.substack.com/"
-      linkedin: "https://www.linkedin.com/in/hannah-stulberg/"
-      youtube: "https://www.youtube.com/@hannahstulberg"
+    publication:
+      name: "In the Weeds"
+      url: "https://hannahstulberg.substack.com/"
 published: 2026-03-13
 series: "Claude Code for Everything"
 series_number: 7
