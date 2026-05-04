@@ -3,11 +3,9 @@ title: "Claude Code for Everything: The Best Personal Assistant Remembers Things
 subtitle: "How to write the onboarding documents that make Claude show up already knowing who you are"
 authors:
   - name: "Hannah Stulberg"
-    publication: "In the Weeds"
-    links:
-      substack: "https://hannahstulberg.substack.com/"
-      linkedin: "https://www.linkedin.com/in/hannah-stulberg/"
-      youtube: "https://www.youtube.com/@hannahstulberg"
+    publication:
+      name: "In the Weeds"
+      url: "https://hannahstulberg.substack.com/"
 published: 2026-02-14
 series: "Claude Code for Everything"
 series_number: 5

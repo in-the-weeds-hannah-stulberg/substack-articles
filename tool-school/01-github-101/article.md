@@ -3,17 +3,13 @@ title: "Tool School: GitHub 101 (GitHub is the New Google Drive)"
 subtitle: "Everything you need to start using GitHub — no coding required"
 authors:
   - name: "Hannah Stulberg"
-    publication: "In the Weeds"
-    links:
-      substack: "https://hannahstulberg.substack.com/"
-      linkedin: "https://www.linkedin.com/in/hannah-stulberg/"
-      youtube: "https://www.youtube.com/@hannahstulberg"
+    publication:
+      name: "In the Weeds"
+      url: "https://hannahstulberg.substack.com/"
   - name: "Sidwyn Koh"
-    publication: "Path to Staff"
-    links:
-      substack: "https://www.pathtostaff.com/"
-      linkedin: "https://www.linkedin.com/in/sidwyn/"
-      github: "https://github.com/sidwyn"
+    publication:
+      name: "Path to Staff"
+      url: "https://www.pathtostaff.com/"
 published: 2026-02-27
 series: "Tool School"
 series_number: 1

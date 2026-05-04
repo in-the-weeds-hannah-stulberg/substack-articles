@@ -3,11 +3,9 @@ title: "Claude Code for Everything: Why AI Gets Dumber The Longer You Talk To It
 subtitle: "Understanding context management so your AI assistant stays sharp"
 authors:
   - name: "Hannah Stulberg"
-    publication: "In the Weeds"
-    links:
-      substack: "https://hannahstulberg.substack.com/"
-      linkedin: "https://www.linkedin.com/in/hannah-stulberg/"
-      youtube: "https://www.youtube.com/@hannahstulberg"
+    publication:
+      name: "In the Weeds"
+      url: "https://hannahstulberg.substack.com/"
 published: 2026-01-20
 series: "Claude Code for Everything"
 series_number: 3

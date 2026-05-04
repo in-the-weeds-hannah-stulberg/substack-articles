@@ -3,11 +3,9 @@ title: "Skip the Terminal (And 8 Other Claude Code Tricks for Non-Technical User
 subtitle: "9 tips that make Claude Code way less intimidating"
 authors:
   - name: "Hannah Stulberg"
-    publication: "In the Weeds"
-    links:
-      substack: "https://hannahstulberg.substack.com/"
-      linkedin: "https://www.linkedin.com/in/hannah-stulberg/"
-      youtube: "https://www.youtube.com/@hannahstulberg"
+    publication:
+      name: "In the Weeds"
+      url: "https://hannahstulberg.substack.com/"
 published: 2026-01-01
 original_url: "https://hannahstulberg.substack.com/p/skip-the-terminal-and-8-other-claude"
 license: "CC BY-NC 4.0"

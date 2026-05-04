@@ -3,16 +3,16 @@ title: "Claude Code for Everything: Finally, That Personal Assistant You've Alwa
 subtitle: "A practical, non-technical guide to setting up and using Claude Code for work and life"
 authors:
   - name: "Hannah Stulberg"
-    publication: "In the Weeds"
-    links:
-      substack: "https://hannahstulberg.substack.com/"
-      linkedin: "https://www.linkedin.com/in/hannah-stulberg/"
-      youtube: "https://www.youtube.com/@hannahstulberg"
+    publication:
+      name: "In the Weeds"
+      url: "https://hannahstulberg.substack.com/"
 published: 2026-01-09
 series: "Claude Code for Everything"
 series_number: 1
 original_url: "https://hannahstulberg.substack.com/p/claude-code-for-everything-finally"
 license: "CC BY-NC 4.0"
+media:
+  youtube: "https://www.youtube.com/watch?v=m4eT9234b8w"
 ---
 
 # Claude Code for Everything: Finally, that Personal Assistant You've Always Wanted
