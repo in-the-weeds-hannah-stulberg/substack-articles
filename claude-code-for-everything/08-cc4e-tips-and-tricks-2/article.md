@@ -1,12 +1,13 @@
-# Claude Code for Everything: Keeping Up with the Claude Code Treadmill (30 Claude Code Tips & Tricks)
-
-**Subtitle:** *More tips and tricks after 1,500+ hours of use*
-
-**Formatted Google Docs:**
-
-- [v2 draft](https://docs.google.com/document/d/1lGxT5bBB2_Oe4vicOmYUTjaR1qXVbIOJPTAiSSYYIEU/edit)
-- [v2 push 2026-04-29](https://docs.google.com/document/d/1dwQWONhgBIt1pZp_Aek2Zx_qOjl86oNh3By7ogL3q2w/edit)
-
+---
+title: "Claude Code for Everything: Keeping Up with the Claude Code Treadmill (30 Claude Code Tips & Tricks)"
+subtitle: "More tips and tricks after 1,500+ hours of use"
+authors:
+  - name: "Hannah Stulberg"
+    publication: "In the Weeds"
+    links:
+      substack: "https://hannahstulberg.substack.com/"
+      linkedin: "https://www.linkedin.com/in/hannah-stulberg/"
+      youtube: "https://www.youtube.com/@hannahstulberg"
 ---
 
 *This is the seventh article in my series on Claude Code for Everything - work and life.*
