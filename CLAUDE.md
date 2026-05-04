@@ -58,6 +58,7 @@ Some articles have **companion data folders** (e.g., `releases/` under Benchmark
 | 11 | Tool School: Benchmarking 101 (How To Read AI Model Report Cards) | Tool School | Hannah Stulberg, Akshat Khandelwal | AI benchmarks, model launches, scoring methods, benchmark categories, saturation, trust tiers, cost comparison, head-to-head evaluation | `tool-school/02-benchmarking-101/article.md` |
 | 12 | Build a Team OS with Claude Code | Standalone | Aakash Gupta (featuring Hannah Stulberg) | Team OS, shared repo, nested CLAUDE.md, context management, token efficiency, analytics scaling, plan mode, parallel agents, learning flywheel | `standalone/build-a-team-os-with-claude-code/article.md` |
 | 13 | Business Sense for Engineers: The Missing Half of Product Sense | Standalone | Sidwyn Koh, Hannah Stulberg | Business sense, P&L, unit economics, CLV/CAC, business models, market sizing, TAM, competitive landscape, moats, 10-K reading | `standalone/business-sense-for-engineers/article.md` |
+| 14 | CC4E #8: Keeping Up with the Claude Code Treadmill (30 Claude Code Tips & Tricks) | Claude Code for Everything | Hannah Stulberg | Cursor themes, terminal panel, markdown extensions, /context, claude-counter, DeepWiki, markitdown, Firecrawl, Claude in Chrome, Playwright MCP, Chrome DevTools MCP, Mermaid, /branch, /btw, Caveman, RTK, /voice, /loop, mobile app, /teleport, Claude Code Channels, thinking verbs | `claude-code-for-everything/08-cc4e-tips-and-tricks-2/article.md` |
 
 ## Topic quick lookup
 
@@ -118,6 +119,35 @@ When someone asks about these topics, point them here:
 | Market sizing / TAM / Uber example | Business Sense for Engineers | "Market sizing: Identifying opportunities worth investing in" |
 | Competitive landscape / moats / Stripe / Microsoft Teams | Business Sense for Engineers | "Competitive landscape: You need to know how your company wins" |
 | How to build business sense / 10-K reading | Business Sense for Engineers | "How to actually build business sense" |
+| Cursor themes / customization | CC4E #8 | "1. Pick a Cursor theme that's actually yours" |
+| Terminal panel / split panes | CC4E #8 | "2. Tame your terminal panel" |
+| Markdown editor extensions in Cursor | CC4E #8 | "3. Install a markdown editor extension to work with markdown files like a Google doc" |
+| Cursor workspaces | CC4E #8 | "5. Build a Cursor workspace for each kind of work you do" |
+| Watch Claude think / Ctrl+O | CC4E #8 | "6. Watch Claude think in real time with Ctrl+O" |
+| /context command | CC4E #8 | "7. Run `/context` to see what's eating your context window" |
+| claude-counter / context tracking on claude.ai | CC4E #8 | "8. Track context usage claude.ai (Claude on the web) with claude-counter" |
+| DeepWiki / mapping a GitHub repo | CC4E #8 | "9. Map any GitHub repo in minutes with DeepWiki" |
+| Pulling Google Workspace files in as Markdown | CC4E #8 | "10. Pull Google Workspace files in as Markdown" |
+| markitdown / converting PDFs and Word docs | CC4E #8 | "11. Convert PDFs, Word docs, and more with markitdown" |
+| Firecrawl / scraping webpages | CC4E #8 | "12. Pull any webpage into Claude Code with Firecrawl" |
+| Claude in Chrome extension | CC4E #8 | "13. Install the Claude in Chrome extension" |
+| Playwright MCP | CC4E #8 | "14. Install the Playwright MCP" |
+| Chrome DevTools MCP | CC4E #8 | "15. Install the Chrome DevTools MCP" |
+| Generating images in Claude Code | CC4E #8 | "16. Generate images directly in Claude Code" |
+| Batch image editing in Claude | CC4E #8 | "17. Edit and batch-process images without leaving Claude" |
+| Mermaid diagrams in markdown | CC4E #8 | "18. Add editable diagrams to any markdown file with Mermaid" |
+| Local HTML previews | CC4E #8 | "19. Spin up quick visual previews with a local HTML file" |
+| Terminal keyboard shortcuts | CC4E #8 | "20. Master the built-in terminal shortcuts" |
+| /branch / forking sessions | CC4E #8 | "21. Fork your session with `/branch`" |
+| /btw / side questions | CC4E #8 | "22. Ask side questions with `/btw` - don't derail your main task" |
+| Caveman mode / output compression | CC4E #8 | "23. Cut Claude's output bloat with Caveman mode" |
+| RTK / input compression | CC4E #8 | "24. Cut Claude's input bloat with RTK" |
+| /voice command | CC4E #8 | "25. Talk to Claude with `/voice` (or Wispr Flow) instead of typing" |
+| /loop / interval triggers | CC4E #8 | "26. Trigger Claude on an interval with `/loop`" |
+| Claude mobile app | CC4E #8 | "27. Use the Claude mobile app to work from your phone" |
+| /teleport / /remote-control | CC4E #8 | "28. Move sessions between devices with `/teleport` and `/remote-control`" |
+| Claude Code Channels / texting Claude | CC4E #8 | "29. Text Claude from anywhere with Claude Code Channels" |
+| Thinking verbs / customizing | CC4E #8 | "30. Change Claude's thinking verbs to your own" |
 
 ## Key metaphors
 
@@ -133,10 +163,11 @@ These are behavioral metaphors - they map to actions, not just concepts. Use the
 | **GitHub is the New Google Drive** | Maps six core GitHub concepts to Google Drive equivalents readers already know: repo = shared folder, commit = save, branch = your copy, main = the original, push/pull = sync, PR = "review my edits." | Tool School: GitHub 101, "Part 3: The Daily GitHub Workflow" |
 | **Keycard** | SSH keys are like a keycard that lets your computer into GitHub without a password. | Tool School: GitHub 101, "Part 1: Setup & Installation" |
 | **SAT score vs great colleague** | A high SAT score doesn't make someone a great colleague. Benchmark scores are standardized tests for AI - each measures one narrow skill. A high score means best at that specific test, not "best model." | Tool School: Benchmarking 101, "A high SAT score doesn't make someone a great colleague" |
+| **Claude Code treadmill** | New Claude Code features ship faster than anyone can keep up with. Don't sprint to set them all up - pick the two or three that solve a problem you're feeling right now and come back for the rest later. | CC4E #8, "The bottom line" |
 
 ## Suggested learning path
 
-**New to Claude Code?** Read the CC4E series in order (1 through 7). Each article builds on the last.
+**New to Claude Code?** Read the CC4E series in order (1 through 8). Each article builds on the last.
 
 **Already using Claude Code?** Jump to the article that covers your question - use the topic lookup table above.
 
