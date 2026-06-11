@@ -36,16 +36,33 @@ The two source modes diverge at Stages 1–2 (discovery + metadata read), then r
 Read the live repo structure at runtime — do NOT assume a snapshot. Source of truth is the repo's root CLAUDE.md (`/Users/hannahstulberg/in-the-weeds-substack-articles/CLAUDE.md`).
 
 Series → target folder mapping (current):
-- `Standalone` → `standalone/<slug>/`
-- `Claude Code for Everything` → `claude-code-for-everything/<NN>-<slug>/` where `NN` = next zero-padded number
-- `Tool School` → `tool-school/<NN>-<slug>/`
+- `Standalone` → `standalone/<folder-slug>/`
+- `Claude Code for Everything` → `claude-code-for-everything/<NN>-<folder-slug>/` where `NN` = next zero-padded number
+- `Tool School` → `tool-school/<NN>-<folder-slug>/`
 
 To find `<NN>`: `ls` the series folder, find highest existing `<NN>-` prefix, add 1, zero-pad to 2 digits.
+
+**Computing `<folder-slug>` (do not reuse the input slug verbatim):**
+
+The input slug often carries a series prefix (`cc4e-`, `tool-school-`) inherited from `~/hannah-personal-agent/` source folders. Repo convention strips those prefixes — folder names are title-derived, short, and don't repeat the series. Compute the folder slug as follows:
+
+1. Read the article title (from frontmatter or H1).
+2. Drop any leading series-name fragment that duplicates the series itself: `Claude Code for Everything: `, `Tool School: ` (case-insensitive). Also drop a parenthetical aside at the end if the title is long.
+3. Lowercase, replace non-alphanumerics with hyphens, collapse runs of hyphens, strip leading/trailing hyphens.
+4. Cap at ~60 chars — pick the most descriptive substring.
+5. Cross-check existing sibling folders in the target series for style match.
+
+Examples (existing repo folders, all derived from titles, none containing the series prefix):
+- "How the Guy Who Built It Actually Uses It" → `02-how-the-guy-who-built-it-actually-uses-it`
+- "Why AI Gets Dumber The Longer You Talk To It" → `03-why-ai-gets-dumber-the-longer-you-talk-to-it`
+- "Keeping Up with the Claude Code Treadmill (30 Claude Code Tips & Tricks)" → `08-keeping-up-with-the-claude-code-treadmill` (drops the parenthetical)
+
+Confirm the computed folder slug with the user before creating the directory if it differs from the input slug.
 
 If the root CLAUDE.md describes a series that isn't in the table above, follow whatever convention root CLAUDE.md documents — the live file always wins over this skill's defaults.
 
 Compute:
-- `target_folder = <series-folder>/<slug>/` (Standalone) or `<series-folder>/<NN>-<slug>/`
+- `target_folder = <series-folder>/<folder-slug>/` (Standalone) or `<series-folder>/<NN>-<folder-slug>/`
 - `target_article = <target-folder>/article.md`
 - `target_claude_md = <target-folder>/CLAUDE.md`
 - `target_images = <target-folder>/images/`
@@ -72,6 +89,48 @@ mv .firecrawl/<slug>/<scraped>.md <target-folder>/article.md
 # For each image URL in the scraped content, download to images/
 # Then rewrite article body so image refs point at images/<filename>
 ```
+
+**Sanitize article.md (both modes, after copy):**
+
+Strip working-doc artifacts and convert source draft format to the public-repo format. Apply BEFORE Stage 5 so line numbers in the generated CLAUDE.md match the final file.
+
+1. **Top-of-file Google Docs draft block.** Hannah's drafts often include `**Formatted Google Docs:**` followed by a blank line + bullet links to `docs.google.com` (e.g., `v2 draft`, `v2 push 2026-04-29`) + a blank line. Delete the entire block.
+2. **Convert H1 + `**Subtitle:**` to YAML frontmatter.** Source drafts open with `# <Title>` then a blank line then `**Subtitle:** *<subtitle>*`. The public-repo format is YAML frontmatter at the top of `article.md`. Use this canonical schema (described fully in `/Users/hannahstulberg/in-the-weeds-substack-articles/.claude/article-frontmatter-schema.md`):
+
+   ```yaml
+   ---
+   title: "<title>"
+   subtitle: "<subtitle without surrounding asterisks>"
+   authors:
+     - name: "Hannah Stulberg"
+       publication:
+         name: "In the Weeds"
+         url: "https://hannahstulberg.substack.com/"
+   published: YYYY-MM-DD               # today's date for unpublished articles
+   series: "Claude Code for Everything"  # OMIT entirely for standalone
+   series_number: 8                      # OMIT entirely for standalone
+   original_url: "https://..."           # canonical Substack/blog URL of the post
+   license: "CC BY-NC 4.0"
+   media:                                # OMIT unless companion media exists
+     youtube: "https://..."
+   ---
+   ```
+
+   Field rules:
+   - **`authors[].publication`** is an object with `name` + `url`. NEVER add a `links:` sub-block. NEVER add a `role:` field. Use the canonical author→publication URL mapping (Hannah → https://hannahstulberg.substack.com/, Joel Salinas → https://leadershipinchange.com/, Sidwyn Koh → https://www.pathtostaff.com/, Akshat Khandelwal → https://helpmeunpack.substack.com/, Aakash Gupta → https://www.news.aakashg.com/).
+   - **`series` / `series_number`** only when article is part of a numbered series. Standalone articles omit both fields entirely (don't write `series: null`).
+   - **`original_url`** — for unpublished articles, ask the user for the planned Substack URL; for firecrawl mode, derive from the input URL.
+   - **`license`** — always `"CC BY-NC 4.0"` unless the user overrides.
+   - **`media`** — only emit when the source folder's `youtube.md` reports `Status: Published` with a real URL, or has confirmed Spotify/Apple URLs. Otherwise omit the entire `media:` block. Flat keys: `spotify`, `apple`, `youtube`.
+
+   For co-authored articles, add additional `authors` entries with the same shape — see `claude-code-for-everything/06-the-one-file-that-can-save-your-team-thousands-of-hours/article.md` (Hannah + Joel) or `standalone/build-a-team-os-with-claude-code/article.md` (Aakash + Hannah, plus full media block) as canonical multi-author examples post-rewrite.
+
+   Don't include the bare `**Subtitle:**` label and don't keep the H1 — the frontmatter replaces both. Drop any `---` separator that immediately followed the original Subtitle line (the frontmatter's closing `---` already provides the visual break).
+
+3. **Trailing publish-meta sections.** Cut from the first occurrence of `## Article Links`, `## SEO`, `## Substack Note`, or `## LinkedIn Post` through end-of-file (including any preceding `---` rule).
+4. **Image path rewrites (local mode).** Source uses `../images/article/<file>` and occasionally `../images/cover/<file>` relative to `drafts/`. Rewrite to `images/<file>`. If a `cover/` image is referenced inline, copy that single file into `<target>/images/` too.
+
+After sanitize, re-run `grep -n "^## \|^### " <target>/article.md` so Stage 5 uses the correct line numbers.
 
 Update temp file: `{"state": "files_copied", "branch": "add/<slug>", "files": [...]}`.
 
