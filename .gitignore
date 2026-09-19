@@ -5,3 +5,7 @@
 .claude/skills/add-substack-article-to-repo/
 .claude/skills/add-substack-urls-to-article/
 tool-school/02-benchmarking-101/releases/
+
+# Session transcripts and logs - never publish to this public repo
+session-logs/
+**/session-logs/

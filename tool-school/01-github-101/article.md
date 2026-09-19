@@ -43,8 +43,6 @@ These new AI-native ways of working don't just require learning AI tools. They r
 
 **A quick note:** This article focuses on using GitHub with Claude Code, but everything here applies whether you're using [Cursor](https://www.cursor.com/), [Antigravity](https://antigravity.google/), [Codex](https://openai.com/codex/), or any other AI coding tool. Everything you learn here applies no matter which tool you use. When we show Claude Code examples, just substitute your tool of choice.
 
-![GitHub is the New Google Drive](images/github-google-drive-001.png)
-
 ![Cover image](images/cover.png)
 
 # By the end of this article, you'll have:
@@ -155,6 +153,8 @@ _A real repo you'll clone, explore, and submit your first PR to by the end of th
 
 Now that you understand what GitHub is and why it matters, let's get hands-on. We've set up a real practice repo that mirrors the examples in this article: [github.com/sidwyn/acme-ops](https://github.com/sidwyn/acme-ops).
 
+![The acme-ops practice repo on GitHub](images/practice-repo-acme-ops.png)
+
 This is Sarah's operations folder from the examples above, turned into a real GitHub repo you can clone and work with. It has playbooks, procedures, and templates - the same structure you've been reading about. Every command and concept in this guide, you'll try on this repo. And by the end of the article, you'll submit your first pull request to it.
 
 We're going to have you **fork** this repo rather than just clone it. There are two ways to get someone else's repo:
@@ -201,6 +201,8 @@ This section walks you through each one.
 
 Go to [github.com/signup](https://github.com/signup) and create an account. Pick a username you're comfortable being public - it will show up on anything you contribute to.
 
+![GitHub signup page](images/github-signup-create-account.png)
+
 ## **2\. Install Git**
 
 Git is the version control system that runs on your machine. GitHub is the website run by Microsoft that hosts Git projects. You need both.
@@ -218,6 +220,8 @@ _Mac:_ Open your terminal and run `xcode-select --install`. This installs Apple'
 _Windows:_ Download [Git for Windows](https://gitforwindows.org/) and run the installer. Accept the defaults.
 
 **Verify it worked:** Run `git --version`. You should see something like `git version 2.53.0`. The exact number doesn't matter as long as something shows up. Sidwyn's name appears here because he's customized his terminal display. Don't worry if you don't see your name.
+
+![Terminal showing the git version output](images/terminal-git-version.png)
 
 ## **3\. Configure Git**
 
@@ -243,6 +247,8 @@ SSH keys come in pairs: a **private key** (stays on your machine - never share t
 
 Claude Code generates the key and shows you exactly where to paste it. At the end of the process, Claude will offer to test your connection to GitHub. Don't worry about any scary error codes.
 
+![Claude Code confirming the SSH connection to GitHub works](images/claude-code-ssh-connection-test.png)
+
 **The manual way:** Run `ssh-keygen -t ed25519 -C "your@email.com"`. The `-t ed25519` part specifies the type of encryption key. It's the modern, recommended option. Leaving it out won't hurt and will fallback to another type of encryption key (RSA).
 
 Press Enter through the prompts (the defaults are fine). Then add the key to your SSH agent: `eval "$(ssh-agent -s)"` then `ssh-add ~/.ssh/id_ed25519`.
@@ -250,6 +256,18 @@ Press Enter through the prompts (the defaults are fine). Then add the key to you
 Copy the public key to your clipboard: on Mac, `pbcopy < ~/.ssh/id_ed25519.pub`; on Windows, `clip < ~/.ssh/id_ed25519.pub`.
 
 Go to [GitHub -> Settings -> SSH Keys](https://github.com/settings/keys), click "New SSH key," paste the public key, and save. _Note: When Claude generates your public SSH key for GitHub, Claude will provide both the key and your email address. Only paste the SSH key into the SSH key box (do not paste your email address)._
+
+![GitHub profile menu with Settings](images/github-profile-menu-settings.png)
+
+![SSH and GPG keys settings page](images/github-settings-ssh-keys-empty.png)
+
+_Click “New SSH Key”_
+
+![The Add new SSH Key form](images/github-add-new-ssh-key-form.png)
+
+_Add your public key_
+
+![An SSH key listed under Authentication keys](images/github-ssh-key-added.png)
 
 GitHub's got a [more detailed guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) if you run into issues here.
 
@@ -306,6 +324,8 @@ _A project folder that remembers everything._
 
 A repository (repo) is a project folder with version history built in (via Git). On the surface it looks like any other folder on your computer: files, subfolders, and maybe a README. The difference is that Git is recording everything that happens inside it - every change you make, every file you add or delete, and every edit to every line. Not just the current state, but the full history. Who changed what, when, and the note they left about why.
 
+![Commit history for the acme-ops repo](images/github-commit-history.png)
+
 When you push that repo to GitHub, the entire history goes with it. Anyone with access can see not just the current state of the files, but every version that ever existed. This is what makes rollback possible - you can always go back to a previous version.
 
 A repo has a specific scope: it's one project, one domain, one self-contained body of work. Everything inside a repo shares the same history and the same collaborators. Things outside the repo are invisible to it - separate repos can't see each other's files or history. This is by design: it keeps unrelated work from getting tangled together.
@@ -318,11 +338,15 @@ _A quick tour of the repo page you'll see on every project._
 
 When you visit a repo on GitHub, here's what you're looking at:
 
+![A repo page on GitHub: file list and README](images/github-repo-file-list-and-readme.png)
+
 **The file list.** The top section shows all files and folders in your repo, just like a file explorer. Click any file to view its contents.
 
 **The README.** Below the file list, GitHub displays the contents of README.md if one exists. This is the front door of every repo - when you land on a project, the README is the first thing you see. It typically explains what the project does, how to set it up, and how to use it. Take a look at [openclaw/openclaw](https://github.com/openclaw/openclaw) for a good example. When you create your own repos, writing a clear README is one of the most useful things you can do. (Sidwyn has a great piece on the [principles of writing for clarity](https://www.pathtostaff.com/p/mastering-communication-part-1-of) \- be clear, be concise, and tell people what they need to know upfront.)
 
 **Commit history.** Click "Commits" (or the clock icon) to see every commit ever made, in reverse chronological order. Each entry shows who made the change, when, and the commit message. This is your version history.
+
+![Commit history for the acme-ops repo](images/github-commit-history.png)
 
 ## **How to Organize Your Repos**
 
@@ -334,11 +358,15 @@ This often trips people up: should everything go in one giant repo, or should yo
 
 Here's my practical guidance: **one repo per project or domain.** You'll likely have two categories of repos: team repos organized by domain and a personal repo for your own work that no one else needs to see. If you're Sarah at Acme, the Acme organization might have these repos - including a private one for Sarah's personal work.
 
+![Acme organization repos, one per domain](images/acme-org-repos-by-domain.png)
+
 The product team doesn't need to see ops playbooks and no one except Sarah needs access to her personal work - initial drafts, notes, CLAUDE.md files, and personal workflows.
 
 **In our practice repo, we've kept things simple:** everything lives in one repo ( [sidwyn/acme-ops](https://github.com/sidwyn/acme-ops)) so you only need to fork one thing. In the real world, Acme would split these into separate repos like the list above.
 
 Inside a repo, organize by the way you actually think about the work.
+
+![Folder structure inside the Acme repos](images/acme-repo-folder-structure.png)
 
 You'll notice a README.md in each repo - the front door we just talked about.
 
@@ -420,6 +448,8 @@ People share Claude Code skills, MCP servers, and other useful tools on GitHub. 
 
 You can search on [github.com](https://github.com/) using the search bar at the top. Try searching for "claude code mcp" or "claude code skills" to see what's out there.
 
+![Searching repositories on GitHub](images/github-search-repositories.png)
+
 There's also a great [curated list of Claude Code resources](https://github.com/hesreallyhim/awesome-claude-code) worth bookmarking. (Yes, the 24k stars on it are real.)
 
 ### **Cloning repos**
@@ -434,6 +464,10 @@ Cloning someone else's repo works the same as cloning your own.
 
 Go to the repo page, click "Code," copy the URL, and run `git clone <url>` in your terminal.
 
+![The Code button with the SSH clone URL to copy](images/github-clone-copy-ssh-url.png)
+
+![Terminal output from git clone](images/terminal-git-clone-output.png)
+
 After cloning, read the README first. Good repos like [cloudflare/moltworker](https://github.com/cloudflare/moltworker) include prerequisites, installation steps, and configuration instructions right there. If the setup looks intimidating, ask Claude Code to walk you through it - it can read the README and handle the installation steps for you. Just ask Claude:
 
 > _"Read the README and help me set up this project."_
@@ -444,6 +478,10 @@ Sometimes you don't just want a copy on your machine. You want your own version 
 
 To fork, click the "Fork" button in the top-right corner of any repo page. GitHub creates a copy under your account. From there, you clone your fork to your machine (just like cloning any other repo) and modify it however you want. You'll fork the practice repo in the next section.
 
+![The Fork button on a repo page](images/github-fork-button.png)
+
+![The Create a new fork screen](images/github-create-a-new-fork.png)
+
 ## **Your First Repo: Fork and Clone acme-ops**
 
 _The hands-on moment - fork the practice repo, clone it to your machine, and explore it._
@@ -453,6 +491,10 @@ Time to get your hands dirty. You're going to clone the practice repo we introdu
 ## **Step 1: Fork the repo on GitHub**
 
 Go to [github.com/sidwyn/acme-ops](https://github.com/sidwyn/acme-ops) and click the **"Fork"** button in the top-right corner. GitHub creates a copy of the repo under your account (e.g., `your-username/acme-ops`). That's it - one click.
+
+![The Fork button on a repo page](images/github-fork-button.png)
+
+![The Create a new fork screen](images/github-create-a-new-fork.png)
 
 ## **Step 2: Clone your fork to your machine**
 
@@ -468,6 +510,12 @@ _Can you put a repo inside your [desktop cloud storage folder](https://hannahstu
 
 In Cursor, open the folder (e.g., `~/projects`) that you've set-up for your repos. Then, prompt Claude:
 
+![The Cursor welcome screen with Open project](images/cursor-welcome-open-project.png)
+
+![Choosing the projects folder in Cursor](images/cursor-choose-projects-folder.png)
+
+![Claude Code running in the Cursor terminal](images/cursor-claude-code-running-in-terminal.png)
+
 > " _Clone https://github.com/ **your-github-username**/acme-ops""_
 
 Claude handles it without you needing to ever leave the terminal.
@@ -476,6 +524,8 @@ Claude handles it without you needing to ever leave the terminal.
 
 Go to your fork on GitHub (`github.com/your-github-username/acme-ops`), click the green "Code" button, and copy the SSH URL (it starts with `git@github.com:`). Then in your terminal: `git clone git@github.com:your-username/acme-ops.git`
 
+![The clone menu with the SSH tab selected](images/github-clone-menu-ssh-tab.png)
+
 _Note: You might see a warning here in the future if you're cloning an empty repository. That's fine._
 
 If you're asked to enter a passphrase, that's your SSH key passphrase from the setup step. Enter it to continue. If you set one and can't remember it, you can create a new SSH key.
@@ -483,6 +533,12 @@ If you're asked to enter a passphrase, that's your SSH key passphrase from the s
 You're in. You now have a local copy of your fork of the practice repo.
 
 Now, open a new window in Cursor and open the `acme-ops` folder. You should see the playbooks, procedures, and templates folders in the sidebar. Take a look at the README.md and the CLAUDE.md file. If you're using Claude Code, the CLAUDE.md loads automatically and Claude is ready to help you with GitHub questions.
+
+![The Cursor welcome screen with Open project](images/cursor-welcome-open-project.png)
+
+![Opening the cloned acme-ops folder in Cursor](images/cursor-open-acme-ops-folder.png)
+
+![acme-ops open in Cursor with Claude Code in the terminal](images/cursor-acme-ops-with-claude-code.png)
 
 ## **You're Ready to Work**
 
@@ -493,6 +549,8 @@ Your repo is forked and cloned. Now how do you actually work?
 You'll work in your [IDE](https://hannahstulberg.substack.com/i/184061644/step-1-choose-and-install-your-ide) (Cursor, VS Code, or similar) with Claude Code running in the [IDE's built-in terminal](https://hannahstulberg.substack.com/i/184061644/the-four-main-areas). This is your primary workspace for everything.
 
 **Important:** Each repo gets its own IDE window - open the repo's folder in your IDE, and that window is your workspace for that project. If you're working across multiple repos, you'll have multiple windows open.
+
+![Two repos open in two separate Cursor windows](images/cursor-two-repos-two-windows.png)
 
 GitHub's web interface is for browsing repos, reading READMEs, and managing settings (most of which can also be done directly in the terminal with Claude Code). You'll use it occasionally, but most of your day-to-day work happens in the IDE (both Sidwyn and I rarely open the web interface).
 
@@ -513,7 +571,13 @@ _The six core GitHub concepts, mapped to a tool you already use._
 
 Most people use Google Drive (or a similar cloud-based file-sharing tool like Dropbox or Notion) on a day-to-day basis. If that's you, you already have the mental model for GitHub.
 
+![GitHub is the New Google Drive](images/github-google-drive-001.png)
+
+![Google Drive concepts mapped to their GitHub equivalents](images/google-drive-to-github-concept-table.png)
+
 Let's go deeper on each one.
+
+![The core GitHub concepts and what each one means](images/core-github-concepts-table.png)
 
 ### **The Short Version**
 
@@ -557,6 +621,8 @@ You can start working with just the short version above. Come back to this secti
 ## **Step 1: Get to your branch**
 
 _How to start your day in GitHub._
+
+![Pull and branch illustration](images/pull-and-branch-illustration.png)
 
 `main` is the version everyone trusts - the official, current state of the project. If you edited it directly and introduced a typo, a broken link, or a half-finished change, it would negatively affect everyone else on your team because they're all also working off of main. It's like editing a shared Google Doc - you use comments or suggest mode rather than overwriting someone else's work directly. Branches are GitHub's version of that. You create a **branch** \- your own parallel copy of the project where you can make changes without affecting anyone else's work. When your changes are ready and reviewed, you merge them back into main.
 
@@ -616,6 +682,10 @@ Claude picks the right approach and handles it.
 
 **The manual way:** Merge: `git merge origin/main`. Rebase: `git rebase origin/main`.
 
+![git pull origin main](images/git-pull-origin-main.png)
+
+![git pull origin main --rebase](images/git-pull-origin-main-rebase.png)
+
 #### Stashing
 
 Here's a situation you'll hit sooner or later: Sarah is editing the vendor section on her branch, and Jake asks her to quickly look at something on his branch. To do this, she needs to switch branches.
@@ -625,6 +695,14 @@ Here's a situation you'll hit sooner or later: Sarah is editing the vendor secti
 1. _Sarah switches without stashing or committing first._ Her uncommitted changes carry over to the other branch - as long as they don't conflict with files on Jake's branch. Sarah's half-finished edits show up on Jake's branch as if she'd made them there. This is a common mistake and can get messy fast. If they do conflict, Git blocks the switch entirely and forces you to stash or commit first.
 
 2. _Sarah stashes or commits first, then switches._ Her files literally change on disk. The file she added on her branch disappears from her IDE. This catches people off guard the first time - it really looks like you lost your work. You didn't. It's still safe on your branch.
+
+![The acme-ops file tree while on the main branch](images/cursor-files-on-main-branch.png)
+
+_File system on main branch_
+
+![The acme-ops file tree while on the set-up-practice-repo branch](images/cursor-files-on-feature-branch.png)
+
+_File system on set-up-practice-repo branch_
 
 The problem is Sarah's current changes aren't ready to commit. They're half-finished, maybe even broken. If she tries to switch branches without saving her work in some way, Git will complain. Why not just commit? She could, but a commit is a version you might want to roll back to later - you don't want your history full of half-broken versions. **Stashing** lets her pause without committing something messy by tucking her uncommitted changes away in a temporary holding area so she can safely switch branches.
 
@@ -643,6 +721,8 @@ When Sarah switches back to her branch:
 ## **Step 2: Make your edits**
 
 _This is the part where you actually do the work._
+
+![Edit illustration](images/edit-illustration.png)
 
 There's nothing special about this step from a Git perspective. Open files, make changes, write content - you're just editing like you normally would. The only difference is that Git is tracking every modification in the background. When you're ready to save a checkpoint, that's the next step.
 
@@ -669,7 +749,11 @@ There are two ways to see your current status in Cursor:
 
 **Source control panel:** Click the branch icon in your IDE's left sidebar (or press Ctrl+Shift+G / Cmd+Shift+G). This shows every file you've changed since your last commit. It's a quick visual way to see what's in progress.
 
+![The source control panel in Cursor](images/cursor-source-control-panel.png)
+
 **The diff view:** Click any changed file in the source control panel to see the **diff** \- a side-by-side comparison showing exactly what changed, line by line. Green highlights mean lines were added, red means lines were removed. You'll use this constantly to review what you've changed before committing.
+
+![The diff view in Cursor](images/cursor-diff-view.png)
 
 Once you've reviewed your changes and everything looks right, it's time to commit. A commit is a snapshot of your work at a specific point in time. Think of it like naming versions in Google Docs - you don't name every small edit, just the meaningful milestones: first draft, second draft, final version. Commits work the same way.
 
@@ -698,7 +782,11 @@ You can also commit specific files instead of all changes: `git add playbooks/qu
 
 _Upload your work to GitHub._
 
+![Push illustration](images/push-illustration.png)
+
 Until you push, your work exists only on your machine. Pushing uploads your local commits to GitHub so they're safely stored online and visible to anyone with repo access.
+
+![Where to find commits on a repo page](images/github-repo-commits-link.png)
 
 **The Claude Code way:**
 
@@ -709,6 +797,8 @@ Until you push, your work exists only on your machine. Pushing uploads your loca
 #### **Step 5: Open a pull request (PR)**
 
 _How to create and review PRs - the part where collaboration actually happens._
+
+![Pull request illustration](images/pull-request-illustration.png)
 
 Pull requests (PRs) are the heart of collaboration on GitHub. If commits are saves and branches are copies, a pull request is you saying: "I'm done working on my copy. Here are my changes, please look them over before we make them official." It's the same as sharing a Google Doc and asking for comments before you finalize it. Except on GitHub, the review process is more structured: people can comment on specific lines, approve the changes, request modifications, and everything is tracked. Sidwyn wrote about [how to turn chaotic reviews into clear decisions](https://www.pathtostaff.com/p/turn-chaotic-reviews-into-clear-decisions) \- a lot of those principles apply to PR reviews too.
 
@@ -728,8 +818,12 @@ Claude Code writes a title and description based on your commits and opens the P
 
 After you've pushed your branch to GitHub, go to your repo's page. GitHub usually shows a yellow banner at the top. Click "Compare & pull request." You'll see a form:
 
+![The Compare and pull request banner after a push](images/github-compare-and-pull-request-banner.png)
+
 - **Title:** A clear summary of what this PR does. "Update vendor contacts for Q2" not "Updates."
 - **Description:** Explain what changed and why. What problem does this solve? What should the reviewer know? A well-written PR description saves everyone time. Seriously, don't skip this part. Sidwyn has written about [the art of framing discussions](https://www.pathtostaff.com/p/the-art-of-framing-discussions) \- PR descriptions are basically the same skill. Frame the "why" before the "what."
+
+![The Open a pull request form: title and description](images/github-open-a-pull-request-form.png)
 
 **Want to see a real PR?** Check out [PR #1 on the acme-ops repo](https://github.com/sidwyn/acme-ops/pull/1) \- it's a real example you can browse.
 
@@ -737,7 +831,21 @@ After you've pushed your branch to GitHub, go to your repo's page. GitHub usuall
 
 When you open a PR, you can (and should) request specific people to review it. This is how the reviewer knows it's their turn.
 
+![Get approval illustration](images/get-approval-illustration.png)
+
 **The manual way:** On the right sidebar of any PR page, you'll see "Reviewers." Click the gear icon, and GitHub shows a list of everyone with access to the repo. Pick who you want. They'll get a notification (email and/or GitHub bell, depending on their settings).
+
+![The Reviewers section in the PR sidebar](images/github-pr-reviewers-sidebar.png)
+
+_Reviewers is on the right-hand side_
+
+![Requesting reviewers on a PR](images/github-pr-request-reviewers.png)
+
+_Select your reviewers_
+
+![A requested reviewer shown in the PR sidebar](images/github-pr-reviewer-added.png)
+
+_Selected reviewers appear_
 
 **The Claude Code way:**
 
@@ -749,6 +857,8 @@ When you open a PR, you can (and should) request specific people to review it. T
 - **Pick someone who'll actually look at it.** A review request that sits for a week isn't helping anyone. If someone's slammed, pick someone else or give them a heads up first.
 - **For solo projects, review your own PR.** Seriously. Open the PR, look at the diff, read through it as if someone else wrote it. You'll catch things you missed. Then approve and merge it yourself. The PR still serves as a record of what changed and why.
 - **One reviewer is usually enough.** Some teams require two approvals, but that's a team setting, not a GitHub default.
+
+![Choosing reviewers from the PR sidebar](images/github-pr-choose-reviewers.png)
 
 ### Reviewing a pull request
 
@@ -766,15 +876,23 @@ You can do all of this in the GitHub web UI or in your IDE with Claude Code.
 
 **In the browser:** Click into the PR and go to the "Files changed" tab. This is the diff view - the same concept you saw in your IDE, but now on GitHub's web UI. Green highlights mean lines were added, red means removed.
 
+![The Files changed tab of a pull request](images/github-pr-files-changed.png)
+
 **With Claude Code:** Ask Claude to walk you through the changes:
 
 > _"Summarize the changes in this PR \[PR URL\] and walk me through them."_
 
 Claude reads the diff and explains what changed in plain language, which makes reviewing much faster.
 
+![Reviewing a pull request in Cursor with Claude Code](images/cursor-reviewing-pr-with-claude-code.png)
+
+_Reviewing a PR within Cursor (IDE) using Claude Code CLI in the terminal_
+
 #### **Leaving comments**
 
 **In the browser:** Hover over a line number in the "Files changed" tab and click the blue "+" icon to leave a comment on that exact line. For broader feedback, use the "Conversation" tab.
+
+![Inline comments on lines of a pull request](images/github-pr-inline-comments.png)
 
 **With Claude Code:** Claude can leave comments on the PR for you. Ask something like:
 
@@ -789,6 +907,8 @@ There are three options to close out your review:
 3. **Request changes:** Something needs to be fixed first.
 
 **In the browser:** Click "Submit review" in the top right.
+
+![The Finish your review dialog: comment, approve, request changes](images/github-pr-finish-your-review.png)
 
 **With Claude Code:** You can ask Claude to approve or request changes on a PR directly.
 
@@ -811,6 +931,8 @@ Once you've requested a review, you're waiting. Here's how you'll find out it's 
 - **The review status badge.** Next to each reviewer's name in the sidebar, you'll see an icon: a green checkmark (approved), an orange dot (changes requested), or a gray clock (pending). At a glance, you know where things stand.
 - **The merge button.** When all required reviewers have approved, the green "Merge pull request" button becomes active. If someone requested changes, the button is blocked until they approve.
 
+![A pull request showing Changes reviewed and one approval](images/github-pr-changes-reviewed.png)
+
 **With Claude Code:**
 
 > _"What's the status of my open PRs?"_
@@ -822,6 +944,8 @@ Claude checks and tells you which are approved, which have comments, and which a
 ## **Step 6: Merge**
 
 _Combine your changes into the official version._
+
+![Merge illustration](images/merge-illustration.png)
 
 ### Merge conflicts
 
@@ -841,6 +965,8 @@ Claude Code reads both versions, understands the intent, and fixes the conflict.
 
 When a conflict happens, Git marks the file with these markers. Everything between `<<<<<<<` and `=======` is your version. Everything between `=======` and `>>>>>>>` is the other version. You need to pick one, combine them, or write something new - then remove the markers.
 
+![Merge conflict markers in the IDE](images/ide-merge-conflict-markers.png)
+
 To avoid big surprises, pull main into your branch regularly while you're working. Smaller conflicts are easier to resolve than one giant one at the end.
 
 ### Merging a pull request
@@ -859,6 +985,8 @@ GitHub gives you three merge options:
 
 If your team already has a preference, follow that. Otherwise, squash and merge is a safe default.
 
+![The three GitHub merge options](images/github-merge-options.png)
+
 After merging, GitHub offers to delete the branch. Do it. The branch has served its purpose - your changes are in main now. If you don't clean up and branches accumulate, you can prune them later:
 
 **The Claude Code way:**
@@ -866,6 +994,8 @@ After merging, GitHub offers to delete the branch. Do it. The branch has served 
 > _"Delete the merged branch and prune old branches."_
 
 **The manual way:** `git branch -d update-vendor-section`
+
+![git fetch --prune](images/git-fetch-prune.png)
 
 # **Beyond the Daily Workflow**
 
@@ -883,6 +1013,10 @@ Once you're working with other people, you need to know when things happen: when
 - A PR you're watching gets merged or closed
 
 **The Notifications bell.** On github.com, click the inbox icon in the top-right corner. This shows all your notifications in one feed: review requests, comments, mentions, and status updates. You can mark them as read, filter by repo, or mute noisy ones.
+
+![The notifications bell in the GitHub header](images/github-notifications-bell.png)
+
+![The GitHub notifications inbox](images/github-notifications-inbox.png)
 
 **Customizing notifications:** Go to [github.com/settings/notifications](https://github.com/settings/notifications) to control what gets emailed vs. what stays in the web feed. I'd recommend keeping email notifications on for "review requested" at minimum. That's the one you don't want to miss.
 
@@ -915,6 +1049,8 @@ Sarah needs to update the vendor section of Acme's operations playbook. Here's w
 9. **Merge.** Jake approves the PR. Sarah merges her branch into main. The official playbook now has the updated vendor section. She deletes the branch since it's done its job.
 
 **That's the whole cycle. Pull, branch, edit, commit, push, PR, merge. Every day, this is the rhythm.**
+
+![Daily workflow](images/daily-workflow-7panel-004.png)
 
 # **When Things Go Wrong**
 
@@ -962,6 +1098,8 @@ Git error messages look like they were written to intimidate you. They weren't, 
 
 **The manual way:** Go back to the SSH setup section. Test with: `ssh -T git@github.com`. You should see "Hi username! You've successfully authenticated."
 
+![Terminal showing a successful SSH authentication to GitHub](images/terminal-ssh-authentication-success.png)
+
 ## **"I accidentally cloned a repo inside another repo"**
 
 **What it means:** You now have a repo nested inside another repo, which means two separate version histories trying to track the same files. When you make a change, it's unclear which repo records it - and you can end up with commits in the wrong repo or missing entirely.
@@ -989,6 +1127,10 @@ GitHub maintains a [collection of .gitignore templates](https://github.com/githu
 Claude Code often creates a .gitignore automatically when setting up a project. If it didn't, ask:
 
 > _"Create a .gitignore for this project."_
+
+A typical `.gitignore` for a project built with Claude Code might include:
+
+![A sample .gitignore file](images/sample-gitignore.png)
 
 ## **What You Should Have Now**
 
